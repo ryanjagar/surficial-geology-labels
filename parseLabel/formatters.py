@@ -98,7 +98,7 @@ def writeParsedComponents(c, csvArray):
     try:
       if len(m['surficialMaterial']) > 1:
         csvArray[labelFields["QUALIFIER" +iter]] = m['surficialMaterial'][1:]
-      csvArray[labelFields["MATERIAL_"+iter]] = m['surficialMaterial']
+      csvArray[labelFields["MATERIAL_"+iter]] = m['surficialMaterial'][0]
     except IndexError:
       pass
   return csvArray
