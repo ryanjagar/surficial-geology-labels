@@ -22,7 +22,7 @@ def parseFile (iFile, oFile = None, format = "csv"):
    outCSV = open(oFile, 'w')
 
    if format == "csv":
-      labelWriter = csv.writer(outCSV, delimiter=',')
+      labelWriter = csv.writer(outCSV, delimiter=',', quotechar="'")
       labelWriter.writerow(labelList[0].split(','))
    elif format == "pretty":
       s = open(oFile, 'w')
