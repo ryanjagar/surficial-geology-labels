@@ -25,7 +25,7 @@ class TerrainClassification:
     return formatters.printPretty(self)
 
   # componentRegEx = re.compile("\W")
-  componentRegEx = re.compile(r"[\\./]+")
+  componentRegEx = re.compile(r"[\\.;/]+")
 
   doubleForwardslashFix = re.compile(r"//")
   singleBackslashFix = re.compile(r"\\")
